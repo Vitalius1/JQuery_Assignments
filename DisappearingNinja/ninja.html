@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('img').click(function () {
+                $(this).addClass('invisible');
+            });
+
+            $('button').click(function(){
+                $('img').removeClass('invisible')
+            });
+        });
+    </script>
+    <style>
+        img {
+            /*display: inline-block;*/
+            margin: 10px;
+            width: 300px;
+            height: auto;
+            visibility: visible;
+        }
+        .invisible {
+            visibility: hidden;
+        }
+
+        button {
+            color: white;
+            background: green;
+            box-shadow: 10px 10px 5px #888888;
+            border: 1px solid black;
+            display: block;
+            padding: 15px;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>jQuery - assignment 1</h1>
+    <div>
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+        <img src="ninja.png" alt="">
+    </div>
+    <button>Restore</button>
+</body>
+
+</html>

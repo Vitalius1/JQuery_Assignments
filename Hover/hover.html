@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var initialImage = $('img').attr('src');
+
+            $('img').hover(
+                function () {
+                $(this).attr("src", $(this).attr("altsrc"));
+            }, function () {
+                $(this).attr("src", initialImage);
+            }
+            );
+
+
+        });
+    </script>
+    <style>
+        img {
+            display: inline-block;
+            margin: 10px;
+            width: 250px;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>jQuery - HoverIn / HoverOut (optional)</h1>
+    <div>
+        <img src="normal.png" altsrc="weird.png">
+        <img src="normal.png" altsrc="crying.png">
+        <img src="normal.png" altsrc="angry.png">
+        <img src="normal.png" altsrc="embarased.png">
+    </div>
+</body>
+
+</html>

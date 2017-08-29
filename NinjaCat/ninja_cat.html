@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // $('img').toggle(function(){
+            //     var temp = $(this).attr('src');
+            //     $(this).attr("src", $(this).attr("altsrc"));
+            // }, function(){
+            //     $(this).attr("altsrc", function(){
+            //         return temp;
+            //     });
+            // });
+
+                var init = $(this).attr("src");
+                var alternate = $(this).attr("altsrc");
+            $('img').click(
+                function () {
+                $(this).attr("src", alternate);
+            }, function () {
+                $(this).attr("src", init);
+            }
+            );
+
+            $('button').click(function () {
+                $('img').css("margin", 0);
+                $('img').css("margin-bottom", -1);
+            });
+        });
+    </script>
+    <style>
+        img {
+            display: block;
+            margin: 10px;
+            width: 300px;
+            height: auto;
+        }
+
+        button {
+            color: white;
+            background: green;
+            box-shadow: 10px 10px 5px #888888;
+            border: 1px solid black;
+            display: block;
+            padding: 15px;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>jQuery - assignment 2 Ninja to Cat</h1>
+    <div>
+        <img src="img/ninja0.png" altsrc="img/cat0.png">
+        <img src="img/cat1.png" altsrc="img/ninja1.png">
+        <img src="img/ninja2.png" altsrc="img/cat2.png">
+        <img src="img/cat3.png" altsrc="img/ninja3.png">
+        <img src="img/ninja4.png" altsrc="img/cat4.png">
+    </div>
+    <button>Let's glue the slices:)</button>
+</body>
+
+</html>
